@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <title>网易新闻右侧布局</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 358px;
+      margin: 50px auto;
+      border-top: 1px solid #ddd;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .title {
+      display: inline-block;
+      border-top: 1px red solid;
+      /* 保证文字上边框和盒子外边框重叠 */
+      margin-top: -1px;
+      padding-top: 8px;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .pic {
+      position: relative;
+      cursor: pointer;
+      margin-top: 10px;
+
+    }
+
+    .img-des {
+      position: absolute;
+      bottom: 20%;
+      color: #fff;
+      /* margin-left: 3px; */
+      height: 10px;
+      line-height: 10px;
+    }
+
+    .img-des::before {
+      content: open-quote;
+      bottom: 1%;
+      font-size: 30px;
+      color: red;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+
+    li {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    li::before {
+      content: "";
+      background: #d9d9d9;
+      width: 5px;
+      height: 5px;
+      display: block;
+      position: absolute;
+      margin-left: -8px;
+      margin-top: 5px;
+    }
+
+    li a {
+      font-size: 14px;
+    }
+
+    li a:hover {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="borderline">
+      <h2 class="title">
+        <a href="#">科技</a>
+      </h2>
+    </div>
+    <div class="pic">
+      <img src="./pic/04.webp">
+      <div class="img-des">
+        来真的!?小米要造定位10万级轿车
+      </div>
+    </div>
+    <div class="content">
+      <ul>
+        <li>
+          <a href="#">谷歌应用商店抽成变更 电子书可降至10%</a>
+        </li>
+        <li>
+          <a href="#">苹果多数产品订单推迟！抛光布等几个月</a>
+        </li>
+        <li>
+          <a href="#">WeWork纽交所上市 上涨13%市值百亿美元</a>
+        </li>
+        <li>
+          <a href="#">英特尔：缺芯至少要持续到2023年</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
