@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <title>京东轮播图布局</title>
+  <style>
+    /* 设置图片容器 */
+    .img-list {
+      position: relative;
+      width: 590px;
+      height: 470px;
+      margin: 100px auto;
+    }
+
+    .img-list li {
+      position: absolute;
+    }
+
+    /* 通过修改元素的层级来显示指定图片 */
+    .img-list li:nth-child(1) {
+      z-index: 1;
+    }
+
+    .pointer {
+      position: absolute;
+      z-index: 200;
+      bottom: 20px;
+      left: 35px;
+    }
+
+    .pointer a {
+      float: left;
+      width: 10px;
+      height: 10px;
+      margin: 0 2px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, .6);
+      /* 将背景颜色设置到内容区，边框和内边距不再有背景色  */
+      background-clip: content-box;
+      border: 2px solid transparent;
+    }
+
+    .pointer a.active,
+    .pointer a:hover {
+      background-color: #fff;
+      border: 2px solid rgba(255, 255, 255, .3);
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="img-list">
+    <li><a href="javascript:;"><img src="./img/01.webp" alt="#"></a></li>
+    <li><a href="javascript:;"><img src="./img/02.webp" alt="#"></a></li>
+    <li><a href="javascript:;"><img src="./img/03.jpg" alt="#"></a></li>
+    <li><a href="javascript:;"><img src="./img/04.webp" alt="#"></a></li>
+    <li><a href="javascript:;"><img src="./img/05.jpg" alt="#"></a></li>
+    <li><a href="javascript:;"><img src="./img/06.webp" alt="#"></a></li>
+    <li><a href="javascript:;"><img src="./img/07.webp" alt="#"></a></li>
+    <div class="pointer">
+      <a class="active" href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+      <a href="javascript:;"></a>
+    </div>
+  </ul>
+
+</body>
+
+</html>
