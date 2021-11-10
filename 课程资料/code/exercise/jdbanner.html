@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <title>Document</title>
+    <style>
+        body{
+            font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        }
+
+        .top-bar-warpper{
+            background-color: #E3E4E5;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+             border-bottom: 1px #ddd solid
+        }
+
+        .top-bar{
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .top-bar a ,
+        .top-bar span,
+        .top-bar i{
+            color: #999;
+            text-decoration: none;
+        }
+
+        .top-bar a:hover,
+        .top-bar a.highlight{
+            color: #f10215;
+        }
+
+        .location{
+            position: absolute;
+            /* float: left; */
+        }
+
+        .location .fas{
+            color: #f10215;
+        }
+
+        .current-city{
+            padding: 0 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .location:hover > .current-city{
+            background-color: white;
+            border: 1px  solid rgb(204, 204, 204);
+            border-bottom: none;
+            padding-bottom: 1px;
+        }
+
+        .location > .city-list{
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+            position:absolute;
+            top:31px;
+            
+        }
+
+        .location:hover > .city-list{
+            display: block;
+        }
+
+        .shortcut{
+            position: absolute;
+            right: 0;
+        }
+
+        .shortcut > li{
+            /* position: absolute; */
+            float: left;
+        }
+        .shortcut > .line{
+            width: 1px;
+            height: 10px;
+            background-color: rgb(204, 202, 202);
+            margin: 12px 12px;
+        }
+
+        .shortcut > li > span::after{
+            content:'\f0d7';
+            font-weight: 900;
+            font-family: 'Font Awesome 5 Free';
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 导航栏背景 -->
+    <div class="top-bar-warpper">
+        <!-- 导航栏主体 -->
+        <div class="top-bar">
+            <!-- 选择所在城市 -->
+            <div class="location">
+                <!-- 当前城市 -->
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">杭州</a>
+                </div>
+                <!-- 选择城市的列表 -->
+                <div class="city-list">
+
+                </div>
+            </div>
+
+            <!-- 右侧其它选项 -->
+            <ul class="shortcut">
+                <li>
+                    <a href="javascript:;">您好，请登录</a>
+                    <a class="highlight" href="javascript:;">免费注册</a>
+                </li>
+
+                <!-- 分割线 -->
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">京东会员</a>
+
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <a class="highlight" href="javascript:;">企业采购</a>
+                </li>
+                
+                <li class="line"></li>
+                <li>
+                    <span>客户服务</span>
+                </li>
+                
+                <li class="line"></li>
+                <li>
+                    <span>网站导航</span>
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <span>手机京东</span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
