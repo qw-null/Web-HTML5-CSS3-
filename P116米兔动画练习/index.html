@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>米兔动画练习</title>
+  <style>
+    .box1 {
+      height: 271px;
+      width: 132px;
+      margin: 0 auto;
+      background-image: url(./img/bigtap-mitu-queue-big.png);
+      background-position: 0 0;
+      transition: .3s step(3);
+    }
+
+    .box1:hover {
+      background-position: -396px 0;
+    }
+
+    .box2 {
+      width: 256px;
+      height: 256px;
+      margin: 0 auto;
+      background-image: url(./img/bg2.png);
+      animation: run .5s steps(6) infinite;
+    }
+
+    /* 创建关键帧 */
+    @keyframes run {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: -1536px 0;
+      }
+
+    }
+
+    /* 跳动的小球 */
+    .outer {
+      height: 500px;
+      border-bottom: 5px black solid;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .outer div {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-left: 10px;
+      border-radius: 50%;
+      animation: ball .5s infinite alternate;
+    }
+
+    .outer .box3 {
+      background-color: #bfa;
+      animation: ball-fall 2s infinite alternate;
+    }
+
+    .outer .box4 {
+      background-color: red;
+      animation-delay: .1s;
+    }
+
+    .outer .box5 {
+      background-color: orange;
+      animation-delay: .2s;
+    }
+
+    .outer .box6 {
+      background-color: yellowgreen;
+      animation-delay: .3s;
+    }
+
+    .outer .box7 {
+      background-color: blue;
+      animation-delay: .4s;
+    }
+
+    .outer .box8 {
+      background-color: rgb(228, 26, 247);
+      animation-delay: .5s;
+    }
+
+    .outer .box9 {
+      background-color: rgb(51, 245, 33);
+      animation-delay: .6s;
+    }
+
+    .outer .box10 {
+      background-color: rgb(89, 194, 154);
+      animation-delay: .7s;
+    }
+
+
+    @keyframes ball-fall {
+      0% {
+        margin-top: 0;
+      }
+
+      20%,
+      60%,
+      100% {
+        margin-top: 450px;
+      }
+
+      40% {
+        margin-top: 150px;
+      }
+
+      80% {
+        margin-top: 300px;
+      }
+    }
+
+    @keyframes ball {
+      0% {
+        margin-top: 0;
+      }
+
+      100% {
+        margin-top: 450px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+
+  <div class="outer">
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+  </div>
+
+</body>
+
+</html>
